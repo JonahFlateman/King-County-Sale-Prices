@@ -38,3 +38,11 @@ We will use a sales dataset from 2014 and 2015 provided in the file 'kc_house_da
 * Iterate on model using a stepwise selection to eliminate variables with p-values greater than .05
 * Create training and testing sets, calculate the mean squared error (MSE) and cross-validate over train-test split sizes
 * Apply trained model to test set
+
+## Square footage and sale price
+
+The dataset gives us square footage of the interior living space, the lot, the area apart from the basement, the basement itself, and interior living and lot space for the nearest 15 neighbors.  Our heatmap used for checking correlations produced high values between all of these variables; we see that the regplot for interior footage is more linear and consistent and so  removed all other square footage variables.
+
+### Comparisons with zipcode
+
+While the dataset provides zipcode, latitude, and longitude information, we can engineer the zipcode feature to be more concrete by dividing each zipcode into a category from 1 to 4.  To do this we find the mean sale price of each zipcode grouping and split this into four quantiles, categorizing and applying back into our DataFrame.  We can now look at the square footage of interior living space compared to sale price with each zipcode category represented in a scatterplot to better visualize this relationship.
