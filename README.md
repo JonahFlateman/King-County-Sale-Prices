@@ -43,6 +43,8 @@ We will use a sales dataset from 2014 and 2015 provided in the file 'kc_house_da
 
 The dataset gives us square footage of the interior living space, the lot, the area apart from the basement, the basement itself, and interior living and lot space for the nearest 15 neighbors.  Our heatmap used for checking correlations produced high values between all of these variables; we see that the regplot for interior footage is more linear and consistent and so  removed all other square footage variables.
 
+![Heatmap](heatmap.png)
+
 ## How can we make the best use of location using ZIP Codes?
 
 While the dataset provides ZIP Code, latitude, and longitude information, we can engineer the ZIP Code feature to be more concrete by dividing each ZIP Code into a category from 1 to 4.  To do this we find the mean sale price of each ZIP Code grouping and split this into four quantiles, categorizing and applying back into our DataFrame.  We can now look at the square footage of interior living space compared to sale price with each ZIP Code category represented in a scatterplot to better visualize this relationship.
