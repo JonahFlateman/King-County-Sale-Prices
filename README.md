@@ -39,10 +39,15 @@ We will use a sales dataset from 2014 and 2015 provided in the file 'kc_house_da
 * Create training and testing sets, calculate the mean squared error (MSE) and cross-validate over train-test split sizes
 * Apply trained model to test set
 
-## Square footage and sale price
+## Which continuous variable is most reliable for our model?
 
 The dataset gives us square footage of the interior living space, the lot, the area apart from the basement, the basement itself, and interior living and lot space for the nearest 15 neighbors.  Our heatmap used for checking correlations produced high values between all of these variables; we see that the regplot for interior footage is more linear and consistent and so  removed all other square footage variables.
 
-### Comparisons with zipcode
+## How can we make the best use of location using ZIP Codes?
 
-While the dataset provides zipcode, latitude, and longitude information, we can engineer the zipcode feature to be more concrete by dividing each zipcode into a category from 1 to 4.  To do this we find the mean sale price of each zipcode grouping and split this into four quantiles, categorizing and applying back into our DataFrame.  We can now look at the square footage of interior living space compared to sale price with each zipcode category represented in a scatterplot to better visualize this relationship.
+While the dataset provides ZIP Code, latitude, and longitude information, we can engineer the ZIP Code feature to be more concrete by dividing each ZIP Code into a category from 1 to 4.  To do this we find the mean sale price of each ZIP Code grouping and split this into four quantiles, categorizing and applying back into our DataFrame.  We can now look at the square footage of interior living space compared to sale price with each ZIP Code category represented in a scatterplot to better visualize this relationship.
+
+## Which reliable categorical variables are most common?
+
+Several categoricals, including bedroom, view, waterfront, and condition ended up in our final model; bathroom in particular had a consistency with sale price which added some reliability.  These range from 0.5 to 4.75 with over 5,000 homes having 2.5 bathrooms with an average sale price right around $500,000.  Slightly fewer than 4,000 homes have one bathroom and are averaging under $400,000 in sale price.  Substantially fewer homes have more than 2.5 bathrooms however their mean sale price averages steadily increase as well.
+
