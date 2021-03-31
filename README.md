@@ -45,11 +45,19 @@ The dataset gives us square footage of the interior living space, the lot, the a
 
 ![Heatmap](heatmap.png)
 
+![Square Footage](sqft_living.png)
+
 ## How can we make the best use of location using ZIP Codes?
 
 While the dataset provides ZIP Code, latitude, and longitude information, we can engineer the ZIP Code feature to be more concrete by dividing each ZIP Code into a category from 1 to 4.  To do this we find the mean sale price of each ZIP Code grouping and split this into four quantiles, categorizing and applying back into our DataFrame.  We can now look at the square footage of interior living space compared to sale price with each ZIP Code category represented in a scatterplot to better visualize this relationship.
 
+![ZIP Codes](zipcode.png)
+
 ## Which reliable categorical variables are most common?
 
 Several categoricals, including bedroom, view, waterfront, and condition ended up in our final model; bathroom in particular had a consistency with sale price which added some reliability.  These range from 0.5 to 4.75 with over 5,000 homes having 2.5 bathrooms with an average sale price right around $500,000.  Slightly fewer than 4,000 homes have one bathroom and are averaging under $400,000 in sale price.  Substantially fewer homes have more than 2.5 bathrooms however their mean sale price averages steadily increase as well.
+
+![Bathroom boxplot](bathroombox.png)
+
+![Bathroom histogram](bathroomhist.png)
 
