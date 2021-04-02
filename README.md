@@ -4,14 +4,14 @@ In this project, we will build a multiple linear regression model to predict sal
 
 ## Dataset
 
-We will use a sales dataset from 2014 and 2015 provided in the file 'kc_house_data.csv.' and imported as a DataFrame
+We will use a sales dataset from 2014 and 2015 provided in the file 'kc_house_data.csv.' and imported as a DataFrame.
 
 ## Goals
 
 * Interpret and clean the data provided into a useful framework for our modeling
 * Feature engineer variables as needed, analyzing relationships between variables and scaling as necessary
-* Iterating on our model to reduce p-values and use R-squared as a key metric
-* Creating training and testing sets of data used to validate our model
+* Iterate on our model to reduce p-values and use R-squared as a key metric
+* Create training and testing sets of data used to validate our model
 
 ## Methodologies
 
