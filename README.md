@@ -1,4 +1,4 @@
-# King County Sale Prices readme
+# King County Sale Prices
 
 In this project, we will build a multiple linear regression model to predict sale prices for homes in King County, WA.  Using an iterative approach, we will clean, feature engineer, normalize, and model our data using an Ordinary Least Squares regression method to build the final model. 
 
